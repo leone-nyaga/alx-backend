@@ -1,10 +1,8 @@
 #!/usr/bin/env python3
-"""Simple pagination"""
-
-
+"""Hypermedia pagination"""
 import csv
 import math
-from typing import List, Tuple
+from typing import List, Dict, Any, Union, Tuple
 
 
 def index_range(page: int, page_size: int) -> Tuple[int, int]:
@@ -29,10 +27,19 @@ class Server:
                                   reader]
         return self.__dataset
 
-    def get_page(self, page: int = 1, page_size: int = 10) -> List[List]:
+    def get_hyper(self, page: int = 1, page_size: int = 10) -> Dict[str, Any]:
         """returns the appropriate page of the dataset"""
         assert isinstance(page, int) and page > 0
         assert isinstance(page_size, int) and page_size > 0
         self.dataset()
         start, end = index_range(page, page_size)
-        return self.__dataset[start:end]
+        data = self.__dataset[start:end]
+        total_pages = math.ceil(len(self.__dataset) / page_size)
+        return {
+            'page_size': len(data),
+            'page': page,
+            'data': data,
+            'next_page': page + 1 if len(data) == page_size else None,
+            'prev_page': page - 1 if page > 1 else None,
+            'total_pages': total_pages
+        }
