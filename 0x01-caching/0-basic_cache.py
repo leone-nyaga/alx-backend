@@ -4,6 +4,7 @@
 
 from base_caching import BaseCaching
 
+
 class BasicCache(BaseCaching):
     """ BasicCache inherits from BaseCaching and implements:
       - put method to add items to cache
