@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 """Babel setup"""
-from flask import Flask
+from flask import Flask, render_template
 from flask_babel import Babel
+from typing import List
 
 
 #Flask app instance
@@ -14,7 +15,7 @@ babel = Babel
 
 class Config():
     """Configuration app class"""
-    LANGUAGES: list[str] = ["en", "fr"]
+    LANGUAGES = ["en", "fr"]
     BABEL_DEFAULT_LOCALE: str = 'en'
     BABEL_DEFAULT_TIMEZONE: str = 'UTC'
 
