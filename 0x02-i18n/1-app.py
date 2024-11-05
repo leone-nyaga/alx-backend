@@ -5,11 +5,11 @@ from flask_babel import Babel
 from typing import List
 
 
-#Flask app instance
+# Flask app instance
 app = Flask(__name__)
 
 
-#Instantiate Babel
+# Instantiate Babel
 babel = Babel
 
 
@@ -27,6 +27,7 @@ app.config.from_object(Config)
 def index() -> str:
     """Render a html template"""
     return render_template('1-index.html')
+
 
 if __name__ == '__main__':
     app.run(debug=True, port=5001)
