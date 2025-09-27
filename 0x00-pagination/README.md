@@ -31,10 +31,13 @@ At the end of this project, you are expected to be able to [explain to anyone](h
 + All your functions should have a documentation (python3 -c 'print(__import__("my_module").my_function.__doc__)'
 + A documentation is not a simple word, it’s a real sentence explaining what’s the purpose of the module, class or method (the length of it will be verified)
 + All your functions and coroutines must be type-annotated.
-+ Setup: Popular_Baby_Names.csv
-+ use this data file for your project
 
-Tasks
+## Setup: Popular_Baby_Names.csv
+
+[use this data file](https://github.com/leone-nyaga/alx-backend/blob/master/0x00-pagination/Popular_Baby_Names.csv) for your project
+
+## Tasks
+
 0. Simple helper function
 
 Write a function named index_range that takes two integer arguments page and page_size.
@@ -109,7 +112,7 @@ class Server:
 
 Implement a method named get_page that takes two integer arguments page with default value 1 and page_size with default value 10.
 
-+ You have to use this CSV file (same as the one presented at the top of the project)
++ You have to use this [CSV](https://github.com/leone-nyaga/alx-backend/blob/master/0x00-pagination/Popular_Baby_Names.csv) file (same as the one presented at the top of the project)
 + Use assert to verify that both arguments are integers greater than 0.
 + Use index_range to find the correct indexes to paginate the dataset correctly and return the appropriate page of the dataset (i.e. the correct list of rows).
 + If the input arguments are out of range for the dataset, an empty list should be returned.
