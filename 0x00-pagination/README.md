@@ -1,8 +1,8 @@
 # 0x00-pagination
 
-![catpick]()
-![catpick]()
-![catpick]()
+![catpick](https://github.com/leone-nyaga/alx-backend/blob/master/0x00-pagination/images/cat0.png)
+![catpick](https://github.com/leone-nyaga/alx-backend/blob/master/0x00-pagination/images/cat1.png)
+![catpick](https://github.com/leone-nyaga/alx-backend/blob/master/0x00-pagination/images/cat2.png)
 
 ## Resources
 
