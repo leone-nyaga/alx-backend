@@ -168,78 +168,81 @@ In your HTML template, if a user is logged in, in a paragraph tag, display a wel
 
 Visiting http://127.0.0.1:5000/ in your browser should display this:
 
-![hello world]()
+![hello world](https://github.com/leone-nyaga/alx-backend/blob/master/0x02-i18n/images/hello%20world.png)
 
 Visiting http://127.0.0.1:5000/?login_as=2 in your browser should display this: 
 
-![hello world bey]()
+![hello world bey](https://github.com/leone-nyaga/alx-backend/blob/master/0x02-i18n/images/hello%20world%20bey.png)
 
 Repo:
 
-GitHub repository: alx-backend
-Directory: 0x02-i18n
-File: 5-app.py, templates/5-index.html
++ GitHub repository: alx-backend
++ Directory: 0x02-i18n
++ File: 5-app.py, templates/5-index.html
   
 6. Use user locale
-mandatory
-Score: 0.0% (Checks completed: 0.0%)
+
 Change your get_locale function to use a user’s preferred local if it is supported.
 
 The order of priority should be
 
-Locale from URL parameters
-Locale from user settings
-Locale from request header
-Default locale
+1. Locale from URL parameters
+2. Locale from user settings
+3. Locale from request header
+4. Default locale
+
 Test by logging in as different users
 
-
+![bonjour monde some](https://github.com/leone-nyaga/alx-backend/blob/master/0x02-i18n/images/sumn%20bonjour%20monde.png)
 
 Repo:
 
-GitHub repository: alx-backend
-Directory: 0x02-i18n
-File: 6-app.py, templates/6-index.html
++ GitHub repository: alx-backend
++ Directory: 0x02-i18n
++ File: 6-app.py, templates/6-index.html
   
 7. Infer appropriate time zone
-mandatory
-Score: 100.0% (Checks completed: 100.0%)
+
 Define a get_timezone function and use the babel.timezoneselector decorator.
 
 The logic should be the same as get_locale:
 
-Find timezone parameter in URL parameters
-Find time zone from user settings
-Default to UTC
+1. Find timezone parameter in URL parameters
+2. Find time zone from user settings
+3. Default to UTC
+
 Before returning a URL-provided or user time zone, you must validate that it is a valid time zone. To that, use pytz.timezone and catch the pytz.exceptions.UnknownTimeZoneError exception.
 
 Repo:
 
-GitHub repository: alx-backend
-Directory: 0x02-i18n
-File: 7-app.py, templates/7-index.html
++ GitHub repository: alx-backend
++ Directory: 0x02-i18n
++ File: 7-app.py, templates/7-index.html
 
 8. Display the current time
-#advanced
-Score: 100.0% (Checks completed: 100.0%)
+
 Based on the inferred time zone, display the current time on the home page in the default format. For example:
 
 Jan 21, 2020, 5:55:39 AM or 21 janv. 2020 à 05:56:28
 
 Use the following translations
 
-msgid	English	French
-current_time_is	"The current time is %(current_time)s."	"Nous sommes le %(current_time)s."
-Displaying the time in French looks like this:
+| msgid           | English                              | French                        |
+|-----------------|------------------------------------|------------------------------|
+| current_time_is | "The current time is %(current_time)s." | "Nous sommes le %(current_time)s." |
 
 
+**Displaying the time in French looks like this**:
 
-Displaying the time in English looks like this:
+![more bonjour](https://github.com/leone-nyaga/alx-backend/blob/master/0x02-i18n/images/more%20bonjour.png)
 
+**Displaying the time in English looks like this**:
+
+![more hello](https://github.com/leone-nyaga/alx-backend/blob/master/0x02-i18n/images/more%20hello.png)
 
 
 Repo:
 
-GitHub repository: alx-backend
-Directory: 0x02-i18n
-File: app.py, templates/index.html, translations/en/LC_MESSAGES/messages.po, translations/fr/LC_MESSAGES/messages.po
++ GitHub repository: alx-backend
++ Directory: 0x02-i18n
++ File: app.py, templates/index.html, translations/en/LC_MESSAGES/messages.po, translations/fr/LC_MESSAGES/messages.po
