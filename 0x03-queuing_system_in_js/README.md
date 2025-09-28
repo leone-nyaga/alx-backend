@@ -84,7 +84,7 @@ At the end of this project, you are expected to be able to [explain to anyone](h
   ]
 }
 ```
-<details>
+</details>
 
 and…
 Don’t forget to run $ npm install when you have the package.json
