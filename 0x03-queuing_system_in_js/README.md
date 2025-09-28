@@ -1,5 +1,7 @@
 # Queuing System in JS
 
+![meem](https://github.com/leone-nyaga/alx-backend/blob/master/0x03-queuing_system_in_js/images/queueing%20meme.png)
+
 ## Resources
 
 Read or watch:
